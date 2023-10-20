@@ -180,14 +180,14 @@ section .title{
 }
 section .title h4{
   font-size:1.35rem;
-  color:#ed4848;
+  color:purple;
   position:relative; /*본래 본인 위치기준(static일 때의 위치)으로 자리잡음*/
 }
 section .title h2{
-  font-size:3.5rem; 
+  font-size:3.5rem;
 }
 section .title p{
-  font-size:1.15rem;
+  font-size:1.15rem;;
 }
 /* about-self 이후 float 속성 해제. float속성은 원래 위치를 보장하지 않으므로 깨끗히 밀고 배치 시작*/
 section .about-self::after{
@@ -209,6 +209,7 @@ section .about-self .right{
   width:50%;
   float:left;
   padding:0 2rem;
+  /* 0 16*2 0 16*2 */
 }
 /* 본문 오른쪽 h3 태그의 글자 크기와 여백 지정 */
 section .about-self .right h3{
@@ -217,7 +218,7 @@ section .about-self .right h3{
 }
 /* 본문 오른쪽 h3 태그의 strong 태그 색상 강조 */
 section .about-self .right h3 strong{
-  color:#ed4848;
+  color:purple;
 }
 /* 본문 오른쪽 p 태그의 크기와 여백 지정 */
 section .about-self .right p{
@@ -231,3 +232,103 @@ section .about-self .right .social a{
 }
 
 /* End about_me.css */
+
+/* what_i_do.css */
+
+/* .do-me float 속성 해제, float속성은 원래 위치를 보장하지 않으므로 깨끗히 밀고 배치 시작*/
+/* section .title h2, h4 등으로 about_me에서 제목 스타일은 지정됨. 본문만 지정시작 */
+section .do-me::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+/* 사각형 크기와 간격, 내부 여백 설정 */
+section .do-me .do-inner{
+  background-color:#fff;
+  /* container 폭을 .do-me가 block으로 모두 차지하므로 사각형은 각 30% 씩 3등분으로 나눠갖는다*/
+  width:30%; 
+  /* border-box에서 padding, border는 width에 포함 */
+  padding:2rem; 
+  float:left;
+  /* container 폭에서 나머지 10%가 설정됨*/
+  margin-right:5%;
+  cursor:pointer;
+}
+/* 마지막 사각형의 외부 여백 빼주는 설정 */
+section .do-me .do-inner:last-child{
+  margin-right:0;
+}
+/* 아이콘 폰트 크기와 색상 */
+section .do-me .do-inner .icon i{
+  font-size:2.5rem;
+  color:#ff6a6a;
+}
+/* HTML5, CSS3, BootStrap v5.0 텍스트 크기와 상단 간격을 떨어뜨림 */
+section .do-me .do-inner .content h3{
+  font-size:2rem;
+  margin:1rem 0;
+}
+/* 사각형 텍스트본문 크기 */
+section .do-me .do-inner .content p{
+  font-size:1.15rem;
+}
+/* do-inner 클래스에 마우스를 올리면 배경색과 텍스트 색상 변경 */
+section .do-me .do-inner:hover{
+  background-color:lightcoral;
+  color:white;
+}
+/* do-inner 클래스에 마우스를 올리면 아이콘 폰트 색상 변경 */
+section .do-me .do-inner:hover i{
+  color:white;
+}
+
+/* End what_i_do.css */
+
+/* background.css */
+.bg{
+    /* center는 한번만 써줘도 변화는 없음 */
+  background:url('./images/background.jpg') center center; 
+  background-size:cover;
+  /* fixed : 스크롤시 움직이지 않음. 백그라운드이므로 위의 섹션과 겹칠시 아래로 표시됨*/
+  background-attachment:fixed;
+  height:650px;
+}
+/* End background.css */
+
+/* portfolio.css */
+/* clear 속성으로 float 속성값 해제*/
+section.portfolio::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+/* portfolio-inner 사각형 꾸미기 */
+section.portfolio .portfolio-inner{
+  width:30%;
+  margin-right:5%;
+  padding:1rem 1rem 1.5rem 1rem;
+  float:left;
+  background-color:#f8f8f8;
+  border:1px solid #ccc;
+  margin-bottom:3rem;
+}
+/* 3번째마다 margin-right 0 적용 */
+section.portfolio .portfolio-inner:nth-child(3n){
+   margin-right:0;
+}
+/* 이미지의 크기가 부모 요소를 넘지 않도록 100%로 지정 */
+section.portfolio .portfolio-inner img{
+  width:100%;
+  display:block;
+}
+/* strong 태그 색상과 간격 */
+section.portfolio .portfolio-inner strong{
+  color:#ff6a6a;
+  margin:0.5rem 0;
+  display:block;
+}
+/* h3 태그 색상과 간격 */
+section.portfolio .portfolio-inner h3{
+  font-size:1.75rem;
+}
+/* End portfolio.css */
