@@ -4,175 +4,190 @@
 
 
 /* header.css */
+
 /* 기본 스타일 시트 초기화 start, 웹 브라우저 기본값 대신 개발자가 정의한 값으로 CSS 적용 */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
-  
-  a, a:link, a:visited{
-    color:inherit;
-    text-decoration:none;
-  }
-  
-  li{
-    list-style:none;
-  }
-  /* 기본 스타일 시트 end */
-  
-  /* container. 전체프로젝트 기준너비(보통1140px)을 유지하기위한 wrapper 
-  margin을 위아래 0, 왼오 auto로 지정하면 수평방향에서 중앙에 위치*/
-  .container{
-    width:1140px;
-    margin:0 auto;
-  }
-  
-  header{
-    position:fixed; /* 프로젝트 완성본처럼 부드럽게 보이려면 자바스크립트가 필요.
-    일단 13.3.3 absolute로 지정 -> fixed */
-    color:white; /* 13.3.3 black -> white */
-    top:0;
-    z-index:1; /* position 속성 지정시 z-index는 기본값 0이 된다. 스크롤시 다른요소에 가려지지 않도록 1로설정*/
-    width:100%;
-    padding:1rem; /* html 태그 크기x1 */
-  }
-/* 헤더영역 메뉴 배치 관련 CSS 코드작성*/
-  header .container{
-    display: flex; /* 헤더 모든요소 한줄 배치 용이하게 flex로 */
-    justify-content: space-between; /* header 영역 컨테이너 하위태그는 2개일때 왼쪽끝과 오른쪽 끝에 붙는식*/
-    align-items: center;/* 수직정렬을 위해 지정 */
-    width: 100%;
-  }
-/* 스페이스(하위) 선택자는 자식을 포함 손주 등 뒤 자손까지 영향 */
-  header nav ul{
-    display: flex; /* h1과 ul은 가로 한줄 적용 됨. 
-    그러나 ul 안의 li는 아직 세로 한줄상태이므로 flex를 마찬가지로 적용 */
-  }
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  header nav ul li{
-    padding: 10px;
-  }
-  header button{
-    background: transparent;
-    border:0;
-    cursor: pointer; /* 버튼에 커서가 있을때 모양 설정*/
-    /* 13.3.3 에서 추가*/
-    color:white;  
-  }
-  header h1 button{
-    font-size: 2rem;
-    font-weight:bold;
-  }
-  header nav ul li button{
-    font-size: 1.2rem;
-    color: white;
-  }
+a, a:link, a:visited{
+  color:inherit;
+  text-decoration:none;
+}
+
+li{
+  list-style:none;
+}
+/* 기본 스타일 시트 end */
+
+/* container. 전체프로젝트 기준너비(보통1140px)을 유지하기위한 wrapper 
+margin을 위아래 0, 왼오 auto로 지정하면 수평방향에서 중앙에 위치*/
+.container{
+  width:1140px;
+  margin:0 auto;
+}
+
+header{
+  position:fixed; /* 프로젝트 완성본처럼 부드럽게 보이려면 자바스크립트가 필요.
+  일단 13.3.3 absolute로 지정 -> fixed */
+  color:white; /* 13.3.3 black -> white */
+  top:0;
+  z-index:1; /* position 속성 지정시 z-index는 기본값 0이 된다. 스크롤시 다른요소에 가려지지 않도록 1로설정*/
+  width:100%;
+  padding:1rem; /* html 태그 크기x1 */
+}
+/* 헤더영역 메뉴 배치 관련 CSS 코드작성*/
+header .container{
+  display: flex; /* 헤더 모든요소 한줄 배치 용이하게 flex로 */
+  justify-content: space-between; /* header 영역 컨테이너 하위태그는 2개일때 왼쪽끝과 오른쪽 끝에 붙는식*/
+  align-items: center;/* 수직정렬을 위해 지정 */
+  width: 100%;
+}
+/* 스페이스(하위) 선택자는 자식을 포함 손주 등 뒤 자손까지 영향 */
+header nav ul{
+  display: flex; /* h1과 ul은 가로 한줄 적용 됨. 
+  그러나 ul 안의 li는 아직 세로 한줄상태이므로 flex를 마찬가지로 적용 */
+}
+
+header nav ul li{
+  padding: 10px;
+}
+header button{
+  background: transparent;
+  border:0;
+  cursor: pointer; /* 버튼에 커서가 있을때 모양 설정*/
+  /* 13.3.3 에서 추가*/
+  color:white;  
+}
+header h1 button{
+  font-size: 2rem;
+  font-weight:bold;
+}
+header nav ul li button{
+  font-size: 1.2rem;
+  color: white;
+}
 
 /* End header.css */
 
+
 /* main.css */
-  main{
-    width:100%;
-    height:100vh;
-    color:white;
-    background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/me.jpg') center center;
-    background-size:cover;
-    display:flex; /* 수직방향에서 요소들이 중앙에 위치 */
-    justify-content:flex-start;
-    align-items:center;
-    text-align:center;
-  }
 
-  /* 텍스트별로 크기와 margin 속성등을 지정*/
+main{
+  width:100%;
+  height:100vh;
+  color:white;
+  background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/me.jpg') center center;
+  background-size:cover;
+  display:flex; /* 수직방향에서 요소들이 중앙에 위치 */
+  justify-content:flex-start;
+  align-items:center;
+  text-align:center;
+}
 
-  /* main tag 안의 자식태그 h4에 대해 지정하며, 하위선택자(스페이스)를 지정한경우 하위 n째 동일 태그까지 스타일 상속됨*/
-  main h4{
-    /* 폰트사이즈를 html 폰트사이즈 16px 대비 2배로 지정*/
-    font-size: 2rem; 
-  }
-  main h2{
-    font-size: 3.5rem;
-    margin: 2rem 0;
-    /* 글자 사이의 간격은 letter-spacing으로, 단어 사이의 간격은 word-spacing으로 정함. 음수설정시 겹침 */
-    letter-spacing: 3px;
-    font-family: "Varela Round", sans-serif; /*구글 폰트 적용, 미지원시 산세리프체로 적용*/
-  }
-  main p{
-    /* p태그 크기는 500px을 초과할수 없음 */
-    max-width: 500px;
-    margin: 0 auto;
-    font-size: 2rem;
-  }
-  /* 버튼 꾸미기 */
-  main button.download{
-    background-color: transparent;  /*보통 버튼은 배경색을 투명하게 지정하고 시작하는 편이 좋다*/
-    border: 3px solid white;
-    border-radius: 20px;
-    padding: 1rem 2rem; /*요소 내부간격 위오아왼 1 2 1 2*/
-    margin-top: 3rem; /*외부간격 설정. 여기서는 p태그로부터 간격*/
-    color: white;/*폰트컬러*/
-    font-weight: bold;
-    cursor: pointer;
-  }
-  main button.mouse{
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    /* 부모, 조상이 모두 static인 경우(position 미설정), document body를 기준으로 bottom, left위치 */
-    position: absolute;
-    bottom: 1rem; 
-    left: 50%; 
-    /*position 좌표설정은 왼쪽 꼭지점을 기준으로 하므로 x축 오른쪽으로 도형의 50%를 당겨 가운데로 맞춤*/
-    transform: translateX(-50%); 
-    /* 키프레임효과 지속시간 부드럽게(천천-보통-천천) 반복횟수 */
-    animation: upDown 1s ease-in-out infinite;
-    cursor: pointer;
-  }
-  @keyframes upDown {
-    0%{
-      bottom: 1rem;
-    }
-    50%{
-      bottom: 1.5rem;
-    }
-    100%{
-      bottom: 1rem;
-    }
-  }
+/* 텍스트별로 크기와 margin 속성등을 지정*/
 
-  /* 메인화면의 글자가 지워졌다가 다시 채워지는 기능 */
-  /* 1. after로 span끝에 커서만들기 */
-  main h2 span::after{
-    content:"";
-    height: 40px;
-    width: 3px;
-    background-color: #fff;
-    /* 컨텐츠의 사이즈에는 상관없이 지정한 box 사이즈를 따름. 
-    공간이 있다면 하나의 라인에서 모두 표시됨. 
-    span 태그는 inline 요소로 
-    width나 height를 설정해 놓더라도 컨텐츠 사이즈에 맞추기 때문에 영향을 받지 않는다.
-    따라서 span과 after를 한줄로 표시하되 사이즈가 적용되도록 inline-block 설정*/
-    display: inline-block; 
-    animation: blank .7s ease-in-out infinite;
+/* main tag 안의 자식태그 h4에 대해 지정하며, 하위선택자(스페이스)를 지정한경우 하위 n째 동일 태그까지 스타일 상속됨*/
+main h4{
+  /* 폰트사이즈를 html 폰트사이즈 16px 대비 2배로 지정*/
+  font-size: 2rem; 
+}
+main h2{
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  /* 글자 사이의 간격은 letter-spacing으로, 단어 사이의 간격은 word-spacing으로 정함. 음수설정시 겹침 */
+  letter-spacing: 3px;
+  font-family: "Varela Round", sans-serif; /*구글 폰트 적용, 미지원시 산세리프체로 적용*/
+}
+main p{
+  /* p태그 크기는 500px을 초과할수 없음 */
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+/* 버튼 꾸미기 */
+main button.download{
+  background-color: transparent;  /*보통 버튼은 배경색을 투명하게 지정하고 시작하는 편이 좋다*/
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 1rem 2rem; /*요소 내부간격 위오아왼 1 2 1 2*/
+  margin-top: 3rem; /*외부간격 설정. 여기서는 p태그로부터 간격*/
+  color: white;/*폰트컬러*/
+  font-weight: bold;
+  cursor: pointer;
+}
+main button.mouse{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  /* 부모, 조상이 모두 static인 경우(position 미설정), document body를 기준으로 bottom, left위치 */
+  position: absolute;
+  bottom: 1rem; 
+  left: 50%; 
+  /*position 좌표설정은 왼쪽 꼭지점을 기준으로 하므로 x축 오른쪽으로 도형의 50%를 당겨 가운데로 맞춤*/
+  transform: translateX(-50%); 
+  /* 키프레임효과 지속시간 부드럽게(천천-보통-천천) 반복횟수 */
+  animation: upDown 1s ease-in-out infinite;
+  cursor: pointer;
+}
+@keyframes upDown {
+  0%{
+    bottom: 1rem;
   }
-  @keyframes blank{
-    0%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
+  50%{
+    bottom: 1.5rem;
   }
+  100%{
+    bottom: 1rem;
+  }
+}
+
+/* 메인화면의 글자가 지워졌다가 다시 채워지는 기능 */
+/* 1. after로 span끝에 커서만들기 */
+main h2 spa
+n::after{
+  content:"";
+
+  height: 40px;
+  width: 3px;
+  background-color: #fff;
+  /* 컨텐츠의 사이즈에는 상관없이 지정한 box 사이즈를 따름. 
+  공간이 있다면 하나의 라인에서 모두 표시됨. 
+  span 태그는 inline 요소로 
+  width나 height를 설정해 놓더라도 컨텐츠 사이즈에 맞추기 때문에 영향을 받지 않는다.
+  따라서 span과 after를 한줄로 표시하되 사이즈가 적용되도록 inline-block 설정*/
+  display: inline-blo
+  ck; 
+  animation: blank .7s ease-in-out infinite;
+}
+@keyframes blank{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 /*End main.css */
 
+
 /* about_me.css */
+
 section{ /* 모든 섹션영역에 글꼴, 위아래 여백 지정 */
   font-family:'Poppins', sans-serif;
   padding:5rem 0;
 }
-section:nth-child(2n){ /* 가상클래스 선택자. 짝수번째 섹션영역 설정 */
+/* 가상클래스 선택자. 
+1. section태그의 부모인 body내 자식을 선택함
+2. 손자는 제외, 바로 아래 자식을 대상으로 적용
+3. 짝수번째 자식, section태그 일때 적용
+4. 자식타입이 section 태그가 아니더라도 카운팅에는 포함, 스타일 적용은 안됨. 
+따라서 div dg를 3번으로 카운팅하므로 portfolio 섹션은 4번이 되어 짝수로 해당속성이 적용됨 
+*/
+section:nth-child(2n){ 
   background-color:#f8f8f8;
 }
 section .title{
@@ -225,7 +240,8 @@ section .about-self .right p{
   font-size:1.15rem;
   margin:1rem 0;
 }
-/* 본문 오른쪽의 아이콘 폰트 크기와 여백 지정 */
+
+/* 본문 오른쪽의 아이콘 폰트 크기와 여백 지정. 정확히는 아이콘을 감싼 a태그의 크기와 여백을 지정.*/
 section .about-self .right .social a{
   font-size:2.5rem;
   margin-right:0.2rem;
@@ -233,11 +249,14 @@ section .about-self .right .social a{
 
 /* End about_me.css */
 
+
 /* what_i_do.css */
 
-/* .do-me float 속성 해제, float속성은 원래 위치를 보장하지 않으므로 깨끗히 밀고 배치 시작*/
 /* section .title h2, h4 등으로 about_me에서 제목 스타일은 지정됨. 본문만 지정시작 */
 section .do-me::after{
+  /* content: '' , display: block 
+  뒤에 내용이 빈 블럭요소를 만들겠다는 뜻. do-me 이후로 float 해제
+  float속성은 원래 위치를 보장하지 않으므로 깨끗히 밀고 배치 시작*/
   content:"";
   display:block;
   clear:both;
@@ -245,7 +264,11 @@ section .do-me::after{
 /* 사각형 크기와 간격, 내부 여백 설정 */
 section .do-me .do-inner{
   background-color:#fff;
-  /* container 폭을 .do-me가 block으로 모두 차지하므로 사각형은 각 30% 씩 3등분으로 나눠갖는다*/
+  /* 부모요소에 따른 폭 계산 (container -> section -> .do-me -> .do-inner)
+  1. header.css 상단에서 전체 요소(*)에 대해 기본 margin, padding 을 모두 0으로 초기화
+  2. about_me.css 상단에서 section은 padding 값이 5rem 0 5rem 0으로 설정되었음. 오른쪽과 왼쪽이 0이므로 폭에 변동없음.
+  3. 바로 위 부모요소인 .do-me 또한 전체요소 지정으로 margin, padding이 0으로 초기화된 상태
+  4. div는 블록요소로 한줄을 모두 차지하므로 .do-inner는 전체폭에 대해 30%씩 3등분으로 나눠갖게됨(총 90%) */
   width:30%; 
   /* border-box에서 padding, border는 width에 포함 */
   padding:2rem; 
@@ -284,9 +307,11 @@ section .do-me .do-inner:hover i{
 
 /* End what_i_do.css */
 
+
 /* background.css */
+
 .bg{
-    /* center는 한번만 써줘도 변화는 없음 */
+  /* center는 한번만 써줘도 변화는 없음 */
   background:url('./images/background.jpg') center center; 
   background-size:cover;
   /* fixed : 스크롤시 움직이지 않음. 백그라운드이므로 위의 섹션과 겹칠시 아래로 표시됨*/
@@ -296,27 +321,40 @@ section .do-me .do-inner:hover i{
 /* End background.css */
 
 /* portfolio.css */
-/* clear 속성으로 float 속성값 해제*/
+
 section.portfolio::after{
+  /* content: '' , display: block 
+  뒤에 내용이 빈 블럭요소를 만들겠다는 뜻. portfolio 이후로 float 해제*/
   content:"";
   display:block;
   clear:both;
 }
 /* portfolio-inner 사각형 꾸미기 */
+/* section.portfolio 형태로 선택자 사용가능. 
+현재는 .portfolio-inner 클래스명이 해당 섹션에서 유일하나 
+가독성과 추후 클래스명 중복으로 CSS 적용 방지를 위해 부모도 선택자로 명시한다 */
 section.portfolio .portfolio-inner{
+  /* what_i_do.css와 동일하게 부모요소에 따른 폭 계산이 이뤄짐.
+  다만 요소가 총 6개 이므로 width 180, margin 20으로 총 200%를 차지한다.
+  기준너비(여기선 100%)를 초과한경우 block 요소 div는 height가 고정되어 있지 않을때 아래로 확장 조절된다.
+  즉 여기서는 3개씩 2줄로 표시된다.*/
   width:30%;
   margin-right:5%;
   padding:1rem 1rem 1.5rem 1rem;
-  float:left;
+  float:left; /* 가로로 표시되도록 방향 left로 지정 */
   background-color:#f8f8f8;
   border:1px solid #ccc;
   margin-bottom:3rem;
 }
-/* 3번째마다 margin-right 0 적용 */
+/* 3번째마다 margin-right 0 을 적용하여 총 가로 margin은 30이 아닌 20으로 적용된다. */
 section.portfolio .portfolio-inner:nth-child(3n){
-   margin-right:0;
+  margin-right:0;
 }
-/* 이미지의 크기가 부모 요소를 넘지 않도록 100%로 지정 */
+/* 이미지의 크기가 부모 요소를 넘지 않도록 100%로 지정 
+이미지는 부모크기를 넘기더라도 원래 크기를 그대로 표시하려는 특징이 있음.
+max-width와 설정시 차이는 이미지 크기가 작은 경우 발생한다. 이미지 크기가 부모보다 작다면 
+max-width는 작은 원래 크기대로 표시되고, width설정시에는 부모 크기와 동일하게 설정된다.
+*/
 section.portfolio .portfolio-inner img{
   width:100%;
   display:block;
@@ -327,8 +365,98 @@ section.portfolio .portfolio-inner strong{
   margin:0.5rem 0;
   display:block;
 }
-/* h3 태그 색상과 간격 */
+
+/* h3 태그 폰트 사이즈*/
 section.portfolio .portfolio-inner h3{
   font-size:1.75rem;
 }
+
 /* End portfolio.css */
+
+
+/* contact_with_me.css */
+
+section.contact .contact-me::after{
+  /* content: '' , display: block 
+  뒤에 내용이 빈 블럭요소를 만들겠다는 뜻. contact-me 이후로 float 해제*/
+  content:""; 
+  display:block;
+  clear:both;
+}
+/* left 30%, right 65%, right의 왼쪽 margin에 5%적용*/
+section.contact .contact-me .left{
+  width:30%;
+  float:left;
+}
+/* 왼쪽의 card 스타일 적용. 테두리, padding(내부여백), margin(간격) 지정 
+flex 적용시 icon과 info-text가 가로 한줄로 배치됨
+align-items로 반대축(수직) 방향 기준으로 가운데로 배치*/
+section.contact .contact-me .left .card{
+  border:1px solid #ccc;
+  padding:1rem;
+  display:flex;
+  align-items:center;
+  margin-bottom:1.25rem;
+}
+/* 본문 왼쪽 아이콘 폰트 크기와 적정 너비 지정 */
+section.contact .contact-me .left .card .icon i{
+  font-size:2rem;
+  margin-right:5px;
+}
+section.contact .contact-me .right{ 
+  float:left;
+  width:65%;
+  margin-left:5%;
+  margin-bottom:2rem;
+  border:1px solid #ccc;
+  padding:1rem;
+}
+/* form-group 사이 간격 지정. form-group 클래스를 가지고있는 div 태그로 폼요소가 그룹화 되어있어 일괄적용 */
+section.contact .contact-me .right .form-group{
+  margin-bottom:1.25rem;
+}
+/* label 태그가 인라인 성격이어서 top-bottom여백은 적용되지 않는다. 따라서 block으로 변경 후 bottom적용 */
+section.contact .contact-me .right .form-group label{
+  display:block;
+  margin-bottom:0.85rem;
+}
+/* input 요소 꾸미기 */
+section.contact .contact-me .right .form-group input{
+  padding:0.625rem;
+  width:100%;
+  /* 기본 테두리 스타일 지우기 */
+  outline:none; 
+  border:1px solid #ccc;
+  /* 모서리 둥글게 */
+  border-radius:10px;
+}
+/* :focus 가상 클래스 선택자로 입력 요소에 커서가 활성화되면 파란색 테두리와 그림자 효과 추가 */ 
+section.contact .contact-me .right .form-group input:focus{
+  border:1px solid #719ECE;
+  box-shadow:0 0 10px #719ECE;
+}
+/* textarea 요소 꾸미기 
+높이는 고정, 폭은 부모요소에 맞춤, 사용자는 사이즈 변경 불가하게 설정*/
+section.contact .contact-me .right .form-group textarea{
+  height:300px;
+  width:100%;
+  resize:none;
+  border:1px solid #ccc;
+  border-radius:10px;
+}
+/* textarea 요소에 커서 활성화가 되면 파란색 테두리와 그림자 효과 추가 */
+section.contact .contact-me .right .form-group textarea:focus{
+  outline:none;
+  border:1px solid #719ECE;
+  box-shadow:0 0 10px #719ECE;
+}
+/* 버튼 요소 꾸미기 */
+section.contact .contact-me .right button{
+  width:100%;
+  padding:1rem;
+  background-color:#f78b00;
+  border:none;
+  color:white;
+}
+
+/* End contact_with_me.css */
