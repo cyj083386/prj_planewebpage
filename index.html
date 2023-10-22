@@ -19,15 +19,24 @@
           전체프로젝트 기준너비(보통1140px)을 유지하기위한 wrapper 역할 -->
       <div class="container"> 
       <h1>
-          <button>SU</button>
+          <!-- 데이터 속성: data- 뒤는 사용자 정의. 데이터 속성은 특정한 데이터를 DOM 요소에 저장해두기 위한 목적이다.-->
+          <button data-scroll="true" data-target="#main">SU</button>
       </h1>
       <!-- nav>ul>li*4>button 에밋사용 -->
       <nav>
           <ul>
-              <li><button>About</button></li>
-              <li><button>Features</button></li>
-              <li><button>Portfolio</button></li>
-              <li><button>Contact</button></li>
+              <li>
+                <button data-scroll="true" data-target="#about">About</button>
+              </li>
+              <li>
+                <button data-scroll="true" data-target="#features">Features</button>
+              </li>
+              <li>
+                <button data-scroll="true" data-target="#portfolio">Portfolio</button>
+              </li>
+              <li>
+                <button data-scroll="true" data-target="#contact">Contact</button>
+              </li>
           </ul>
       </nav>
       </div>
@@ -38,8 +47,8 @@
   <main id="main">
       <div class="container"> <!-- 기준 너비 container 클래스 포함한 div 태그 -->
           <h4>Welcome</h4>
-          <!-- 13.10.1에서 span 태그의 내용이 비워집니다. -->
-          <h2>I`M A <span>Developer</span></h2>
+          <!-- span 태그를 사용한것은 별도의 문서객체를 구분하여 JS를 적용하기 위해서이다. -->
+          <h2>I`M A <span></span></h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolor quas nulla unde ea officiis?</p>
           <!-- 폼에서 사용하는 버튼이 아니므로, input type button으로 지정해 사용하지 않는다. -->
           <button class="download">DOWNLOAD CV</button>
@@ -245,5 +254,7 @@
     </div>
   </section>
   <!-- end Contact With Me -->
+
+  <script src="script.js"></script>
 </body>
 </html>
